@@ -3,7 +3,7 @@
     <nb-card size="small">
       <nb-card-header>Popover Position</nb-card-header>
       <nb-card-body>
-        <p>When popover has not enough space based on the configured placement, it will adjust accordingly trying to fit the screen.</p>
+        <p>Khi cửa sổ bật lên không có đủ dung lượng dựa trên vị trí được định cấu hình, nó sẽ điều chỉnh cho phù hợp để cố gắng vừa với màn hình.</p>
         <button class="btn btn-danger with-margins" nbPopover="Hello, how are you today?" nbPopoverMode="hint" nbPopoverPlacement="left">Left</button>
         <button class="btn btn-danger with-margins" nbPopover="Hello, how are you today?" nbPopoverMode="hint" nbPopoverPlacement="top">Top</button>
         <button class="btn btn-danger with-margins" nbPopover="Hello, how are you today?" nbPopoverMode="hint" nbPopoverPlacement="bottom">Bottom</button>
@@ -16,7 +16,7 @@
     <nb-card size="small">
       <nb-card-header>Simple Popovers</nb-card-header>
       <nb-card-body>
-        <p>In a simples form popover can take a string of text to render.</p>
+        <p>Trong một popover form đơn giản nhất có thể lấy một chuỗi văn bản để render.</p>
         <button class="btn btn-success with-margins" nbPopover="Hello, how are you today?">on click</button>
         <button class="btn btn-success with-margins" nbPopover="Hello, how are you today?" nbPopoverMode="hover">on hover</button>
         <button class="btn btn-success with-margins" nbPopover="Hello, how are you today?" nbPopoverMode="hint">on hint</button>
@@ -75,7 +75,7 @@
     <nb-card size="small">
       <nb-card-header>Template Popovers</nb-card-header>
       <nb-card-body>
-        <p>You can pass a refference to `ng-template` to be rendered.</p>
+        <p>Bạn có thể chuyển tham chiếu tới `ng-template` để được trả về.</p>
         <button class="btn btn-warning with-margins" [nbPopover]="tabs">With tabs</button>
         <button class="btn btn-warning with-margins" [nbPopover]="form">With form</button>
         <button class="btn btn-warning with-margins" [nbPopover]="card">With card</button>
@@ -87,7 +87,7 @@
     <nb-card size="small">
       <nb-card-header>Component Popovers</nb-card-header>
       <nb-card-body>
-        <p>Same way popover can render any angular compnoent.</p>
+        <p>Cùng một popover có thể làm thành phần của một component khác.</p>
         <button class="btn btn-warning with-margins" [nbPopover]="tabsComponent">With tabs</button>
         <button class="btn btn-warning with-margins" [nbPopover]="formComponent">With form</button>
         <button class="btn btn-warning with-margins" [nbPopover]="cardComponent">With card</button>
