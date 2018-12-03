@@ -1,0 +1,82 @@
+<div>
+    <app-page-header [heading]="'Change Pass'" [icon]="'fa-edit'"></app-page-header>
+    <div class="card" style="margin-top: 30px">
+        <div class="card-header">
+            <strong>Change Password</strong>
+        </div>
+        <div class="card-body">
+            <!--bindings={
+      "ng-reflect-ng-if": "[object Object]"
+    }-->
+            <form class="form-horizontal ng-untouched ng-pristine ng-invalid" enctype="multipart/form-data" novalidate="">
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <strong>Current Password</strong>
+                        <span class="text-danger">*</span>
+                    </div>
+                    <div class="col-md-5">
+                        <input class="form-control ng-untouched ng-pristine ng-invalid" name="oldpassword" placeholder="" required="" type="password" ng-reflect-required="" ng-reflect-name="oldpassword">
+                        <span hidden="">
+                            <span class="k-widget k-tooltip k-tooltip-validation k-invalid-msg field-validation-error" data-for="oldpassword" data-valmsg-for="oldpassword" id="password_validationMessage" role="alert">
+                                <i class="fa fa-exclamation-triangle"></i> Required!
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <strong>New Password</strong>
+                        <span class="text-danger">*</span>
+                    </div>
+                    <div class="col-md-5">
+                        <input class="form-control ng-untouched ng-pristine ng-invalid" minlength="8" name="newpassword" placeholder="" required="" ng-reflect-required="" ng-reflect-minlength="8" ng-reflect-pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*" ng-reflect-name="newpassword"
+                            type="password" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&amp;*-]).{8,}$$">
+                        <a class="fa cus_showEyes pull-right fa-eye-slash" ng-reflect-klass="fa cus_showEyes pull-right" ng-reflect-ng-class="[object Object]"> </a>
+                        <span hidden="">
+                            <span class="k-widget k-tooltip k-tooltip-validation k-invalid-msg field-validation-error" data-for="newpassword" data-valmsg-for="newpassword" id="newpassword_validationMessage" role="alert">
+                                <!--bindings={
+      "ng-reflect-ng-if": "true"
+    }--><span>
+                                    <i class="fa fa-exclamation-triangle"></i> Required!</span>
+                        <!--bindings={}-->
+                        </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <strong>Confirm Password</strong>
+                        <span class="text-danger">*</span>
+                    </div>
+                    <div class="col-md-5">
+                        <input class="form-control ng-untouched ng-pristine ng-invalid" minlength="8" name="confirmPassword" placeholder="" required="" validateequal="newpassword" ng-reflect-required="" ng-reflect-minlength="8" ng-reflect-pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*"
+                            ng-reflect-name="confirmPassword" type="password" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&amp;*-]).{8,}$$">
+                        <a class="fa cus_showEyes pull-right fa-eye-slash" ng-reflect-klass="fa cus_showEyes pull-right" ng-reflect-ng-class="[object Object]"></a>
+                        <span hidden="">
+                            <span class="k-widget k-tooltip k-tooltip-validation k-invalid-msg field-validation-error" data-for="confirmPassword" data-valmsg-for="confirmPassword" id="confirmPassword_validationMessage" role="alert">
+                                <!--bindings={
+      "ng-reflect-ng-if": "true"
+    }--><span>
+                                    <i class="fa fa-exclamation-triangle"></i> Required!</span>
+                        <!--bindings={
+      "ng-reflect-ng-if": "false"
+    }-->
+                        </span>
+                        </span>
+                    </div>
+                </div>
+                <!--bindings={
+      "ng-reflect-ng-if": "false"
+    }-->
+                <hr>
+                <div class="form-group row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-5">
+                        <button class="btn" type="reset" tabindex="0" ng-reflect-router-link="/users-profile/2">Back</button> &nbsp;
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

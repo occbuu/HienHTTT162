@@ -1,0 +1,120 @@
+<div [@routerTransition]>
+    <app-page-header [heading]="'View Lines'" [icon]="'fa-edit'"></app-page-header>
+    <small>See more details on a company's listing</small>
+    <div class="card" style="margin-top: 10px">
+        <div class="card-header" (click)="isCollapsed = !isCollapsed">
+            <i class="pull-right fa" [ngClass]="{'fa-chevron-down': isCollapsed, 'fa-chevron-up': !isCollapsed}"></i>
+            <strong>Search Criteria</strong>
+        </div>
+        <div class="card-body" [ngbCollapse]="isCollapsed">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group row col-md-8">
+                        <label class="col-md-3 col-form-label" for="select">Key words</label>
+                        <input type="text" name="name" class="col-md-9 form-control" placeholder="Enter keywords to search" />
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group row col-md-8">
+                        <label class="col-xs-12 col-12 col-md-3 col-form-label" for="select">Status</label>
+                        <select class="col-xs-12 col-12 col-md-9 form-control">
+                        <option  value="1">Active</option>
+                        <option  value="0">InActive</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group row" style="margin-left: 1%">
+                        <button class="btn btn-outline-primary" (click)="search()" type="button">Search</button> &nbsp;
+                        <button class="btn btn-outline-primary" (click)="reset()" type="button">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="col-md-12">
+                        <button class="btn btn-outline-primary pull-right" (click)="export()" type="button">Export to excel</button> <br/><br/>
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>
+                                    Line Code
+                                </th>
+                                <th>
+                                    Line Name
+                                </th>
+                                <th>
+                                    Starting
+                                </th>
+                                <th>
+                                    Ending
+                                </th>
+                                <th>
+                                    Status
+                                </th>
+                                <th>
+                                    Action
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>TBS-01-01</td>
+                                <td>Sckecher LIne of AB</td>
+                                <td>2018-05-15</td>
+                                <td>2018-05-30</td>
+                                <td>
+                                    <span class="badge badge-success">Active</span>
+                                </td>
+                                <td class="text-center">
+                                    <a class="btn-blue fa fa-pencil" routerLink="/linedetail"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>TBS-01-02</td>
+                                <td>Decathlon of VA</td>
+                                <td>2018-05-19</td>
+                                <td>2018-05-29</td>
+                                <td>
+                                    <span class="badge badge-warning">Pending</span>
+                                </td>
+                                <td class="text-center">
+                                    <a class="btn-blue fa fa-pencil" routerLink="/emailtemplates-edit/123"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>TBS-02-01</td>
+                                <td>Wolverine LIne ADF</td>
+                                <td>2018-05-25</td>
+                                <td>2018-06-25</td>
+                                <td>
+                                    <span class="badge badge-secondary">Inactive</span>
+                                </td>
+                                <td class="text-center">
+                                    <a class="btn-blue fa fa-pencil" routerLink="/emailtemplates-edit/123"></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="8">
+
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

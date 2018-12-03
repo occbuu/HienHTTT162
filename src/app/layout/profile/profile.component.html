@@ -1,0 +1,107 @@
+<div>
+    <app-page-header [heading]="'My profile'" [icon]="'fa-edit'"></app-page-header>
+    <div class="card" style="margin-top: 30px">
+        <div class="card-header">
+            <strong>Users Profile</strong>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <strong>First Name</strong>
+                            <span class="text-danger">*</span>
+                        </div>
+                        <div class="col-md-8">
+                            <input class="form-control ng-untouched ng-pristine ng-valid" name="firstName" required="" value="Khánh" type="text">
+                            <span class="k-widget k-tooltip k-tooltip-validation k-invalid-msg field-validation-error" data-for="firstName" data-valmsg-for="firstName" id="firstname_validationMessage" role="alert" hidden="">
+                                <i class="fa fa-exclamation-triangle"></i> Required!
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <strong>Company</strong>
+                            <span class="text-danger">*</span>
+                        </div>
+                        <div class="col-md-8">
+                            <input class="form-control ng-untouched ng-pristine ng-valid" name="company" value="TBS Company" required="" type="text">
+                            <span class="k-widget k-tooltip k-tooltip-validation k-invalid-msg field-validation-error" data-for="company" data-valmsg-for="company" id="company_validationMessage" role="alert" hidden="">
+                                <i class="fa fa-exclamation-triangle"></i> Required!
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <strong>KYC Status</strong>
+                        </div>
+                        <div class="col-md-8">
+                            <span>Approved</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <strong>Last Name</strong>
+                            <span class="text-danger">*</span>
+                        </div>
+                        <div class="col-md-8">
+                            <input class="form-control ng-untouched ng-pristine ng-valid" name="lastName" value="Ngân" required="" type="text">
+                            <span class="k-widget k-tooltip k-tooltip-validation k-invalid-msg field-validation-error" data-for="lastName" data-valmsg-for="lastName" id="lastname_validationMessage" role="alert" hidden="">
+                                <i class="fa fa-exclamation-triangle"></i> Required!
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <label class="col-form-label" for="select">
+                                <b>Phone No. </b>
+                                <span class="text-danger">*</span>
+                            </label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <select class="form-control ng-untouched ng-pristine ng-valid" name="countryCode" required="">
+                                        <!----><option value="+65-SGP">Singapore-65</option><option value="+93-AFG">Afghanistan-93</option><option value="+91-IND">India-91</option><option value="+1-USA">United States-1</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-control pull-right ng-untouched ng-pristine ng-valid" name="phoneNo" required="" type="text">
+                                    <span class="k-widget k-tooltip k-tooltip-validation k-invalid-msg field-validation-error" data-for="phoneNo" data-valmsg-for="phoneNo" id="phoneNo_validationMessage" role="alert" hidden="">
+                                        <i class="fa fa-exclamation-triangle"></i> Required!
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <strong>Email</strong>
+                            <span class="text-danger">*</span>
+                        </div>
+                        <div class="col-md-8">
+                            <input class="form-control ng-untouched ng-pristine ng-valid" name="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required="" type="text">
+                            <span class="k-widget k-tooltip k-tooltip-validation k-invalid-msg field-validation-error" data-for="email" data-valmsg-for="email" id="email_validationMessage" role="alert" hidden="">
+                                <i class="fa fa-exclamation-triangle"></i> Invalid email format!
+                            </span>
+                            <!---->
+                        </div>
+                    </div>
+                    Click
+                    <a class="btn-blue font-weight-bold" [routerLink]="['/changepass']">here</a> to Change Password
+                </div>
+            </div>
+            <hr>
+            <div class="form-group row">
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-10">
+                    <button class="btn" routerlink="/dashboard" type="button" tabindex="0">Back</button> &nbsp;
+                    <button class="btn btn-outline-primary" type="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

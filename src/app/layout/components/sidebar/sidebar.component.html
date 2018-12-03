@@ -1,0 +1,270 @@
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
+    <div class="list-group">
+        <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-dashboard"></i>&nbsp;{{ 'Dashboard' | translate }}
+        </a>
+        <div class="nested-menu">
+            <a class="list-group-item" (click)="addExpandClass('operation')">
+                <span><i class="fa fa-info"></i>&nbsp; {{ 'Operation' | translate }}</span>
+            </a>
+            <li class="nested" [class.expand]="showMenu === 'operation'">
+                <ul class="submenu">
+                    <li>
+                        <a [routerLink]="['/errortype']" [routerLinkActive]="['router-link-active']">
+                            <span>
+                                <i class="fa fa-bug"></i>&nbsp;
+                                {{ 'Error' | translate }}
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/product']" [routerLinkActive]="['router-link-active']">
+                            <span>
+                                    <i class="fa fa-product-hunt"></i>&nbsp;
+                                    {{ 'Product' | translate }}
+                                </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/rule']" [routerLinkActive]="['router-link-active']">
+                            <span>
+                                        <i class="fa fa-toggle-on"></i>&nbsp;
+                                        {{ 'Rules' | translate }}
+                                    </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/announce']" [routerLinkActive]="['router-link-active']">
+                            <span>
+                                            <i class="fa fa-bullhorn"></i>&nbsp;
+                                            {{ 'Announce Template' | translate }}
+                                        </span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+
+        <div class="nested-menu">
+            <a class="list-group-item" (click)="addExpandClass('lines')">
+                <span><i class="fa fa-chain"></i>&nbsp;{{ 'Line Mgt' | translate }}</span>
+            </a>
+            <li class="nested" [class.expand]="showMenu === 'lines'">
+                <ul class="submenu">
+                    <li>
+                        <a [routerLink]="['/addline']" [routerLinkActive]="['router-link-active']">
+                            <span>
+                                    <i class="fa fa-calendar"></i>&nbsp;
+                                    {{ 'Add Line' | translate }}
+                                </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/viewline']" [routerLinkActive]="['router-link-active']">
+                            <span>
+                                        <i class="fa fa-plus-square"></i>&nbsp;
+                                        {{ 'View Lines' | translate }}
+                                    </span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+        <div class="nested-menu">
+            <a class="list-group-item" (click)="addExpandClass('rpt')">
+                <span><i class="fa fa-bar-chart-o"></i>&nbsp;{{ 'Report & Statistic' | translate }}</span>
+            </a>
+            <li class="nested" [class.expand]="showMenu === 'rpt'">
+                <ul class="submenu">
+                    <li>
+                        <a [routerLink]="['/prorpt']" [routerLinkActive]="['router-link-active']">
+                            <span>
+                                        <i class="fa fa-file-o"></i>&nbsp;
+                                        {{ 'Product report' | translate }}
+                                    </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/errrpt']" [routerLinkActive]="['router-link-active']">
+                            <span>
+                                            <i class="fa fa-file-o"></i>&nbsp;
+                                            {{ 'Error Report' | translate }}
+                                        </span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+        <div class="nested-menu">
+            <a class="list-group-item" (click)="addExpandClass('noti')">
+                <span><i class="fa fa-bell"></i>&nbsp;{{ 'Notification' | translate }}</span>
+            </a>
+            <li class="nested" [class.expand]="showMenu === 'noti'">
+                <ul class="submenu">
+                    <li>
+                        <a [routerLink]="['/mynoti']" [routerLinkActive]="['router-link-active']">
+                            <span>
+                                                    <i class="fa fa-paper-plane"></i>&nbsp;
+                                                    {{ 'My Notifications' | translate }}
+                                                </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/notiadd']" [routerLinkActive]="['router-link-active']">
+                            <span>
+                                            <i class="fa fa-paper-plane"></i>&nbsp;
+                                            {{ 'Add Notification' | translate }}
+                                        </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/notiview']" [routerLinkActive]="['router-link-active']">
+                            <span>
+                                                <i class="fa fa-bell-o"></i>&nbsp;
+                                                {{ 'Notifications History' | translate }}
+                                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+        <div class="nested-menu">
+            <a class="list-group-item" (click)="addExpandClass('sys')">
+                <span><i class="fa fa-cogs"></i>&nbsp;{{ 'System management' | translate }}</span>
+            </a>
+            <li class="nested" [class.expand]="showMenu === 'sys'">
+                <ul class="submenu">
+                    <li>
+                        <a [routerLink]="['/user']" [routerLinkActive]="['router-link-active']">
+                            <span>
+                                            <i class="fa fa-users"></i>&nbsp;
+                                            {{ 'User management' | translate }}
+                                        </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/userrole']" [routerLinkActive]="['router-link-active']">
+                            <span>
+                                                    <i class="fa fa-cog"></i>&nbsp;
+                                                    {{ 'User roles' | translate }}
+                                                </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/syssetting']" [routerLinkActive]="['router-link-active']">
+                            <span>
+                                                <i class="fa fa-cog"></i>&nbsp;
+                                                {{ 'System settings' | translate }}
+                                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+
+        <a class="list-group-item">
+            ---------------------------
+        </a>
+        <a [routerLink]="['/charts']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;{{ 'Charts' | translate }}
+        </a>
+        <a [routerLink]="['/tables']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-table"></i>&nbsp;{{ 'Tables' | translate }}
+        </a>
+        <a [routerLink]="['/forms']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-edit"></i>&nbsp;{{ 'Forms' | translate }}
+        </a>
+        <a [routerLink]="['/bs-element']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-desktop"></i>&nbsp;{{ 'Bootstrap Element' | translate }}
+        </a>
+        <a [routerLink]="['/grid']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-wrench"></i>&nbsp;{{ 'Bootstrap Grid' | translate }}
+        </a>
+        <a [routerLink]="['/components']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-th-list"></i>&nbsp;{{ 'Component' | translate }}
+        </a>
+
+        <a [routerLink]="['/blank-page']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-file-o"></i>&nbsp;{{ 'Blank Page' | translate }}
+        </a>
+
+        <div class="header-fields">
+            <a (click)="rltAndLtr()" class="list-group-item">
+                <span><i class="fa fa-arrows-h"></i>&nbsp; RTL/LTR</span>
+            </a>
+            <div class="nested-menu">
+                <a class="list-group-item" (click)="addExpandClass('languages')">
+                    <span><i class="fa fa-language"></i>&nbsp; {{ 'Language' | translate }} <b class="caret"></b></span>
+                </a>
+                <li class="nested" [class.expand]="showMenu === 'languages'">
+                    <ul class="submenu">
+                        <li>
+                            <a href="javascript:void(0)" (click)="changeLang('en')">
+                                {{ 'English' | translate }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" (click)="changeLang('fr')">
+                                {{ 'French' | translate }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" (click)="changeLang('ur')">
+                                {{ 'Urdu' | translate }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" (click)="changeLang('es')">
+                                {{ 'Spanish' | translate }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" (click)="changeLang('it')">
+                                {{ 'Italian' | translate }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" (click)="changeLang('fa')">
+                                {{ 'Farsi' | translate }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" (click)="changeLang('de')">
+                                {{ 'German' | translate }}
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+            <div class="nested-menu">
+                <a class="list-group-item" (click)="addExpandClass('profile')">
+                    <span><i class="fa fa-user"></i>&nbsp; Khánh Ngân</span>
+                </a>
+                <li class="nested" [class.expand]="showMenu === 'profile'">
+                    <ul class="submenu">
+                        <li>
+                            <a href="javascript:void(0)">
+                                <span><i class="fa fa-fw fa-user"></i> {{ 'Profile 1' | translate }}</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <span><i class="fa fa-fw fa-envelope"></i> {{ 'Inbox' | translate }}</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <span><i class="fa fa-fw fa-gear"></i> {{ 'Settings' | translate }}</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/login']" (click)="onLoggedout()">
+                                <span><i class="fa fa-fw fa-power-off"></i> {{ 'Log Out' | translate }}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+        </div>
+    </div>
+</nav>

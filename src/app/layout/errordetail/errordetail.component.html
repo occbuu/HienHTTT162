@@ -1,0 +1,154 @@
+<div [@routerTransition]>
+    <app-page-header [heading]="'Error Detail'" [icon]="'fa-edit'"></app-page-header>
+
+    <div class="row card">
+        <div class="col col-lg-12 card-body">
+            <div class="row">
+                <div class="col-md-6 ">
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <strong>Error Name</strong>
+                            <span class="text-danger">*</span>
+                        </div>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" value="Lệch mũi gót" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <strong>Location Product</strong>
+                        </div>
+                        <div class="col-md-8">
+                            <select name="" id="">
+                                <option value="">Vùng 4</option>
+                                <option value="">Vùng 1</option>
+                                <option value="">Vùng 2</option>
+                                <option value="">Vùng 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                        </div>
+                        <div class="col-md-8">
+                            <img src="./assets/images/giay.jpg" width="250px" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <strong>Create By</strong>
+                            <span class="text-danger">*</span>
+                        </div>
+                        <div class="col-md-8">
+                            Ms Ngân
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <strong>Approved By</strong>
+                            <span class="text-danger">*</span>
+                        </div>
+                        <div class="col-md-8">
+                            Mr Tùng
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <strong>Error Phare</strong>
+                            <span class="text-danger">*</span>
+                        </div>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" name="firstName" value="Upper" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <strong>Status</strong>
+                            <span class="text-danger">*</span>
+                        </div>
+                        <div class="col-md-8">
+                            <select>
+                            <option>Active </option>
+                            <option>Inactive </option>                           
+                        </select>
+                        </div>
+                    </div>
+                    <div class="form-group row" style="height: 165px">
+                        <div class="col-md-4">
+                        </div>
+                        <div class="col-md-8">
+
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <strong>Create Time</strong>
+                            <span class="text-danger">*</span>
+                        </div>
+                        <div class="col-md-8">
+                            20/06/2018
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <strong>Approved Time</strong>
+                            <span class="text-danger">*</span>
+                        </div>
+                        <div class="col-md-8">
+                            20/06/2018
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-4">
+
+                        </div>
+                        <div class="col-md-4">
+                            <button class="button btn-block" [routerLink]="['/errortype']">Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+
+</div>
+
+<div bsModal #AlertModal="bs-modal" [config]="{backdrop: 'static'}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modelAlert modal-lgg" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:#dddddd ">
+                <h4 class="modal-title">Confirm</h4>
+                <!-- <button type="button" class="close" (click)="a1EModal.hide()" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button> -->
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div style="text-align: center">
+                            <strong>Are you sure, you want to close?</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-3"> </div>
+                        <div class="col-md-3">
+                            <button type="button" class="btn btn-outline-primary btn-block" (click)="AlertModal.hide();">Yes</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button type="button" class="btn btn-block" (click)="AlertModal.hide();">No</button>
+                        </div>
+                        <div class="col-md-3"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
