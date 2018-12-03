@@ -1,123 +1,453 @@
 <div class="main-content">
-  <div class="container-fluid">
-      <div class="card">
-          <div class="card-header card-header-danger">
-              <h3 class="card-title">Notifications</h3>
-              <p class="card-category">Handcrafted by our friend
-                  <a target="_blank" href="https://github.com/mouse0270">Robert McIntosh</a>. Please checkout the
-                  <a href="http://bootstrap-notify.remabledesigns.com/" target="_blank">full documentation.</a>
-              </p>
-          </div>
-          <div class="card-body">
-              <div class="row">
-                  <div class="col-md-6">
-                      <h4 class="card-title">Notifications Style</h4>
-                      <div class="alert alert-info">
-                          <span>This is a plain notification</span>
-                      </div>
-                      <div class="alert alert-info">
-                          <button mat-button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                              <i class="material-icons">close</i>
-                          </button>
-                          <span>This is a notification with close button.</span>
-                      </div>
-                      <div class="alert alert-info alert-with-icon" data-notify="container">
-                          <i class="material-icons" data-notify="icon">add_alert</i>
-                          <button mat-button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                              <i class="material-icons">close</i>
-                          </button>
-                          <span data-notify="message">This is a notification with close button and icon.</span>
-                      </div>
-                      <div class="alert alert-info alert-with-icon" data-notify="container">
-                          <i class="material-icons" data-notify="icon">add_alert</i>
-                          <button mat-button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                              <i class="material-icons">close</i>
-                          </button>
-                          <span data-notify="message">This is a notification with close button and icon and have many lines. You can see that the icon and the close button are always vertically aligned. This is a beautiful notification. So you don't have to worry about the style.</span>
-                      </div>
-                  </div>
-                  <div class="col-md-6">
-                      <h4 class="card-title">Notification states</h4>
-                      <div class="alert alert-info">
-                          <button mat-button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                              <i class="material-icons">close</i>
-                          </button>
-                          <span>
-                              <b> Info - </b> This is a regular notification made with ".alert-info"</span>
-                      </div>
-                      <div class="alert alert-success">
-                          <button mat-button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                              <i class="material-icons">close</i>
-                          </button>
-                          <span>
-                              <b> Success - </b> This is a regular notification made with ".alert-success"</span>
-                      </div>
-                      <div class="alert alert-warning">
-                          <button mat-button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                              <i class="material-icons">close</i>
-                          </button>
-                          <span>
-                              <b> Warning - </b> This is a regular notification made with ".alert-warning"</span>
-                      </div>
-                      <div class="alert alert-danger">
-                          <button mat-button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                              <i class="material-icons">close</i>
-                          </button>
-                          <span>
-                              <b> Danger - </b> This is a regular notification made with ".alert-danger"</span>
-                      </div>
-                      <div class="alert alert-primary">
-                          <button mat-button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                              <i class="material-icons">close</i>
-                          </button>
-                          <span>
-                              <b> Primary - </b> This is a regular notification made with ".alert-primary"</span>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-12">
-              <div class="places-buttons">
-                  <div class="row">
-                      <div class="col-md-6 ml-auto mr-auto text-center">
-                          <h4 class="card-title">
-                              Notifications Places
-                              <p class="category">Click to view notifications</p>
-                          </h4>
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col-lg-8 col-md-10 ml-auto mr-auto">
-                          <div class="row">
-                              <div class="col-md-4">
-                                  <button mat-raised-button class="btn btn-danger btn-block" (click)="showNotification('top','left')">Top Left</button>
-                              </div>
-                              <div class="col-md-4">
-                                  <button mat-raised-button class="btn btn-danger btn-block" (click)="showNotification('top','center')">Top Center</button>
-                              </div>
-                              <div class="col-md-4">
-                                  <button mat-raised-button class="btn btn-danger btn-block" (click)="showNotification('top','right')">Top Right</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col-lg-8 col-md-10 ml-auto mr-auto">
-                          <div class="row">
-                              <div class="col-md-4">
-                                  <button mat-raised-button class="btn btn-danger btn-block" (click)="showNotification('bottom','left')">Bottom Left</button>
-                              </div>
-                              <div class="col-md-4">
-                                  <button mat-raised-button class="btn btn-danger btn-block" (click)="showNotification('bottom','center')">Bottom Center</button>
-                              </div>
-                              <div class="col-md-4">
-                                  <button mat-raised-button class="btn btn-danger btn-block" (click)="showNotification('bottom','right')">Bottom Right</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h3 class="card-title">Notifications</h3>
+                <p class="card-category">Handcrafted by our friend
+                    <a target="_blank" href="https://github.com/mouse0270">Robert McIntosh</a>. Please checkout the
+                    <a href="http://bootstrap-notify.remabledesigns.com/" target="_blank">full documentation.</a>
+                </p>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4 class="card-title">Notifications Style</h4>
+                        <div class="alert alert-info">
+                            <span>This is a plain notification</span>
+                        </div>
+                        <div class="alert alert-info">
+                            <button mat-button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <i class="material-icons">close</i>
+                            </button>
+                            <span>This is a notification with close button.</span>
+                        </div>
+                        <div class="alert alert-info alert-with-icon" data-notify="container">
+                            <i class="material-icons" data-notify="icon">add_alert</i>
+                            <button mat-button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <i class="material-icons">close</i>
+                            </button>
+                            <span data-notify="message">This is a notification with close button and icon.</span>
+                        </div>
+                        <div class="alert alert-info alert-with-icon" data-notify="container">
+                            <i class="material-icons" data-notify="icon">add_alert</i>
+                            <button mat-button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <i class="material-icons">close</i>
+                            </button>
+                            <span data-notify="message">This is a notification with close button and icon and have many
+                                lines. You can see that the icon and the close button are always vertically aligned.
+                                This is a beautiful notification. So you don't have to worry about the style.</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="card-title">Notification states</h4>
+                        <div class="alert alert-info">
+                            <button mat-button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <i class="material-icons">close</i>
+                            </button>
+                            <span>
+                                <b> Info - </b> This is a regular notification made with ".alert-info"</span>
+                        </div>
+                        <div class="alert alert-success">
+                            <button mat-button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <i class="material-icons">close</i>
+                            </button>
+                            <span>
+                                <b> Success - </b> This is a regular notification made with ".alert-success"</span>
+                        </div>
+                        <div class="alert alert-warning">
+                            <button mat-button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <i class="material-icons">close</i>
+                            </button>
+                            <span>
+                                <b> Warning - </b> This is a regular notification made with ".alert-warning"</span>
+                        </div>
+                        <div class="alert alert-danger">
+                            <button mat-button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <i class="material-icons">close</i>
+                            </button>
+                            <span>
+                                <b> Danger - </b> This is a regular notification made with ".alert-danger"</span>
+                        </div>
+                        <div class="alert alert-primary">
+                            <button mat-button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <i class="material-icons">close</i>
+                            </button>
+                            <span>
+                                <b> Primary - </b> This is a regular notification made with ".alert-primary"</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="places-buttons">
+                    <div class="row">
+                        <div class="col-md-6 ml-auto mr-auto text-center">
+                            <h4 class="card-title">
+                                Notifications Places
+                                <p class="category">Click to view notifications</p>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8 col-md-10 ml-auto mr-auto">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <button mat-raised-button class="btn btn-danger btn-block" (click)="showNotification('top','left')">Top
+                                        Left</button>
+                                </div>
+                                <div class="col-md-4">
+                                    <button mat-raised-button class="btn btn-danger btn-block" (click)="showNotification('top','center')">Top
+                                        Center</button>
+                                </div>
+                                <div class="col-md-4">
+                                    <button mat-raised-button class="btn btn-danger btn-block" (click)="showNotification('top','right')">Top
+                                        Right</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8 col-md-10 ml-auto mr-auto">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <button mat-raised-button class="btn btn-danger btn-block" (click)="showNotification('bottom','left')">Bottom
+                                        Left</button>
+                                </div>
+                                <div class="col-md-4">
+                                    <button mat-raised-button class="btn btn-danger btn-block" (click)="showNotification('bottom','center')">Bottom
+                                        Center</button>
+                                </div>
+                                <div class="col-md-4">
+                                    <button mat-raised-button class="btn btn-danger btn-block" (click)="showNotification('bottom','right')">Bottom
+                                        Right</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-body">
+                <div class="tab-content">
+                    <div class="form-group row">
+                        <label style="margin-top: 1%">Chọn loại thông báo</label>
+                        <div class="col-sm-3">
+                            <select class="form-control">
+                                <option>Cấp 1</option>
+                                <option>Cấp 2</option>
+                                <option>Cấp 3</option>
+                                <option>Cấp 4</option>
+                            </select></div>
+                    </div>
+
+                    <div class="col-md-12" id="profile">
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="" checked>Thông báo Email.
+                                <span class="form-check-sign">
+                                    <span class="check"></span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="" checked>Thông báo SMS.
+                                <span class="form-check-sign">
+                                    <span class="check"></span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="" checked>Thông báo WhatsApp.
+                                <span class="form-check-sign">
+                                    <span class="check"></span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="" checked>Thông báo Zalo.
+                                <span class="form-check-sign">
+                                    <span class="check"></span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="">Thông báo ứng dụng khác.
+                                <span class="form-check-sign">
+                                    <span class="check"></span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="">Báo động chuông.
+                                <span class="form-check-sign">
+                                    <span class="check"></span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="" checked>Thông báo chuông tòa
+                                nhà.
+                                <span class="form-check-sign">
+                                    <span class="check"></span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="row col-md-12">
+                            <label>Nội dung thông báo.</label>
+                            <textarea class="form-control" aria-label="With textarea"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-success">Chạy thử</button>
+                        <button type="button" class="btn btn-danger">Lưu</button>
+                        <button type="button" class="btn btn-dark">Quay lại</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-body">
+                <div class="tab-content">
+                    <div class="form-group row">
+                        <label style="margin-top: 1%">Chọn loại thông báo</label>
+                        <div class="col-sm-3">
+                            <select class="form-control">
+                                <option>Cấp 1</option>
+                                <option>Cấp 2</option>
+                                <option>Cấp 3</option>
+                                <option>Cấp 4</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <label style="margin-top: 2%">Từ ngày...</label>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label style="margin-top: 1%">Từ khóa: </label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="inputkeyWord">
+                        </div>
+                        <button type="button" class="btn btn-danger">Tìm kiếm</button>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="card card-plain">
+                            <div class="card-header card-header-danger">
+                                <p class="card-category">Kết quả tìm kiếm</p>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead class="">
+                                            <th>
+                                                ID
+                                            </th>
+                                            <th>
+                                                Loại thông báo
+                                            </th>
+                                            <th>
+                                                Nội dung
+                                            </th>
+                                            <th>
+                                                Thời gian
+                                            </th>
+                                            <th>
+                                                Tình trạng
+                                            </th>
+                                            <th>
+                                                Hành động
+                                            </th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    1
+                                                </td>
+                                                <td>
+                                                    Dakota Rice
+                                                </td>
+                                                <td>
+                                                    Niger
+                                                </td>
+                                                <td>
+                                                    Oud-Turnhout
+                                                </td>
+                                                <td>
+                                                    $36,738
+                                                </td>
+                                                <td>
+                                                    Sửa
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    2
+                                                </td>
+                                                <td>
+                                                    Minerva Hooper
+                                                </td>
+                                                <td>
+                                                    Curaçao
+                                                </td>
+                                                <td>
+                                                    Sinaai-Waas
+                                                </td>
+                                                <td>
+                                                    $23,789
+                                                </td>
+                                                <td>
+                                                    Xóa
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    3
+                                                </td>
+                                                <td>
+                                                    Sage Rodriguez
+                                                </td>
+                                                <td>
+                                                    Netherlands
+                                                </td>
+                                                <td>
+                                                    Baileux
+                                                </td>
+                                                <td>
+                                                    $56,142
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    4
+                                                </td>
+                                                <td>
+                                                    Philip Chaney
+                                                </td>
+                                                <td>
+                                                    Korea, South
+                                                </td>
+                                                <td>
+                                                    Overland Park
+                                                </td>
+                                                <td>
+                                                    $38,735
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    5
+                                                </td>
+                                                <td>
+                                                    Doris Greene
+                                                </td>
+                                                <td>
+                                                    Malawi
+                                                </td>
+                                                <td>
+                                                    Feldkirchen in Kärnten
+                                                </td>
+                                                <td>
+                                                    $63,542
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    6
+                                                </td>
+                                                <td>
+                                                    Mason Porter
+                                                </td>
+                                                <td>
+                                                    Chile
+                                                </td>
+                                                <td>
+                                                    Gloucester
+                                                </td>
+                                                <td>
+                                                    $78,615
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-body">
+                <div class="tab-content">
+                    <div class="form-group row">
+                        <div class="col-sm-2">
+                            <label style="margin-top: 1%">Vị trí file Log:</label></div>
+                        <div class="col-sm-3">
+                            <div class="custom-file">
+                                <input type="file" id="customFile">
+                                <label class="custom-file-label" for="customFile">Chọn tệp</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-2">
+                            <label style="margin-top: 1%">Loại file Log</label></div>
+                        <div class="col-sm-3">
+                            <select class="form-control">
+                                <option>XML</option>
+                                <option>JS</option>
+                                <option>TXT</option>
+                                <option>LOG</option>
+                            </select></div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-2">
+                            <label style="margin-top: 1%">Kích thước tối đa</label></div>
+                        <div class="col-sm-3">
+                            <select class="form-control">
+                                <option>1MB</option>
+                                <option>10MB</option>
+                                <option>100MB</option>
+                                <option>1GB</option>
+                            </select></div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-2">
+                            <label style="margin-top: 1%">Thời gian đọc</label></div>
+                        <div class="col-sm-3">
+                            <select class="form-control">
+                                <option>1 phút</option>
+                                <option>5 phút</option>
+                                <option>10 phút</option>
+                                <option>30 phút</option>
+                            </select></div>
+                    </div>
+                    <div class="form-group row">
+                    <div class="col-sm-2"></div>
+                    <button type="button" class="btn btn-danger">Lưu</button>
+                    <button type="button" class="btn btn-dark">Quay lại</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
