@@ -1,14 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import 'rxjs/add/operator/filter';
 
 declare var $: any;
+
 @Component({
   selector: 'app-notifications',
   templateUrl: './notifications.component.html',
   styleUrls: ['./notifications.component.css']
 })
 export class NotificationsComponent implements OnInit {
-
-  constructor() { }
+  public screen: any;
+  constructor(private route: ActivatedRoute) { }
   showNotification(from, align){
       const type = ['','info','success','warning','danger'];
 
@@ -38,6 +41,11 @@ export class NotificationsComponent implements OnInit {
       });
   }
   ngOnInit() {
+    this.route.queryParams
+      .filter(params => params.screen)
+      .subscribe(params => {
+        this.screen = params.screen;
+      });
   }
 
 }

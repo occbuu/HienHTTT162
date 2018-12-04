@@ -132,7 +132,7 @@
 
 <div class="main-content">
     <div class="container-fluid">
-        <div class="card">
+        <div *ngIf="screen == 'setting'" class="card">
             <div class="card-header card-header-danger">
                 <h4 class="card-title">Cấu hình thông báo</h4>
             </div>
@@ -142,10 +142,10 @@
                         <label style="margin-top: 1%">Chọn loại thông báo</label>
                         <div class="col-sm-3">
                             <select class="form-control">
-                                <option>Cấp 1</option>
-                                <option>Cấp 2</option>
-                                <option>Cấp 3</option>
-                                <option>Cấp 4</option>
+                                <option>Cấp 1: Thông báo</option>
+                                <option>Cấp 2: Nhắc nhở</option>
+                                <option>Cấp 3: Cảnh báo</option>
+                                <option>Cấp 4: Báo động</option>
                             </select></div>
                     </div>
 
@@ -221,7 +221,7 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div *ngIf="screen == 'search'" class="card">
             <div class="card-header card-header-danger">
                 <h4 class="card-title">Tìm kiếm thông báo</h4>
             </div>
@@ -231,10 +231,10 @@
                         <label style="margin-top: 1%">Chọn loại thông báo</label>
                         <div class="col-sm-3">
                             <select class="form-control">
-                                <option>Cấp 1</option>
-                                <option>Cấp 2</option>
-                                <option>Cấp 3</option>
-                                <option>Cấp 4</option>
+                                <option>Cấp 1: Thông báo</option>
+                                <option>Cấp 2: Nhắc nhở</option>
+                                <option>Cấp 3: Cảnh báo</option>
+                                <option>Cấp 4: Báo động</option>
                             </select>
                         </div>
                         <div class="col-sm-3">
@@ -294,7 +294,7 @@
                                                     $36,738
                                                 </td>
                                                 <td>
-                                                    Sửa
+                                                    <img class="img" src="../assets/img/faces/edit-icon.png" />
                                                 </td>
                                             </tr>
                                             <tr>
@@ -314,7 +314,7 @@
                                                     $23,789
                                                 </td>
                                                 <td>
-                                                    Xóa
+                                                    <img class="img" src="../assets/img/faces/delete-icon.png"/>
                                                 </td>
                                             </tr>
                                             <tr>
