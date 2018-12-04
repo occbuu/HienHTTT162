@@ -1,9 +1,9 @@
 <div class="logo">
     <a href="https://www.creative-tim.com" class="simple-text">
         <div class="logo-img">
-            <img src="/assets/img/angular2-logo-red.png" />
+            <img src="/assets/img/s-logo.jpg" />
         </div>
-        Creative Tim
+        SNORT
     </a>
 </div>
 <div class="sidebar-wrapper">
@@ -46,7 +46,7 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#pablo">
+                <a class="nav-link" href="#user-profile?screen=profile">
                     <i class="material-icons">person</i>
                     <p>
                         <span class="d-lg-none d-md-block">Account</span>
@@ -67,8 +67,8 @@
                 <a class="dropdown-item" href="notifications?screen=setting">Cấu Hình Thông Báo</a>
             </div>
             <div *ngIf="menuItem.icon == 'person'" class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Người dùng</a>
-                <a class="dropdown-item" href="#">Phân quyền</a>
+                <a class="dropdown-item" href="user-profile?screen=profile">Người dùng</a>
+                <a class="dropdown-item" href="user-profile?screen=role">Phân quyền</a>
             </div>
         </li>
     </ul>

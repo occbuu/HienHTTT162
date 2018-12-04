@@ -13,7 +13,7 @@ export const ROUTES: RouteInfo[] = [
     { path: '/table-list', title: 'Xem traffic',  icon:'content_paste', class: '',show: false  },
     { path: '/typography', title: 'Cấu hình log',  icon:'library_books', class: '',show: false  },
     { path: '/notifications?screen=search', title: 'Thông báo',  icon:'notifications', class: 'dropdown-toggle',show: true  },
-    { path: '/user-profile', title: 'Cài đặt',  icon:'person', class: 'dropdown-toggle',show: true  },
+    { path: '/user-profile?screen=profile', title: 'Cài đặt',  icon:'person', class: 'dropdown-toggle',show: true  },
     //{ path: '/icons', title: 'Icons',  icon:'bubble_chart', class: '' },
     //{ path: '/maps', title: 'Maps',  icon:'location_on', class: '' },
     //{ path: '/upgrade', title: 'Upgrade to PRO',  icon:'unarchive', class: 'active-pro' },
