@@ -94,31 +94,31 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header card-header-danger">
-                        <h4 class="card-title">Search Criteria</h4>
+                        <h4 class="card-title">Phân quyền</h4>
                     </div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group row col-md-8">
-                                    <label class="col-md-3 col-form-label" for="select">Role</label>
+                                    <label class="col-md-3 col-form-label" for="select">Vai trò</label>
                                     <input class="col-md-8 form-control ng-untouched ng-pristine ng-valid" name="name"
-                                        ngmodel="" placeholder="Enter Role name" type="text">
+                                        ngmodel="" placeholder="Nhập vai trò" type="text">
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group row col-md-8">
-                                    <label class="col-xs-12 col-12 col-md-3 col-form-label" for="select">Status</label>
+                                    <label class="col-xs-12 col-12 col-md-3 col-form-label" for="select">Trạng thái</label>
                                     <select class="col-xs-12 col-12 col-md-8 form-control ng-untouched ng-pristine ng-valid">
-                                        <option value="-">All</option>
                                         <option value="ACT">Active</option>
                                         <option value="INA">Inactive</option>
+                                        <option value="-">All</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group row" style="margin-left: 1%">
-                                    <button class="btn btn-danger pull-right">Search</button> &nbsp;
-                                    <button class="btn btn-danger pull-right">Reset</button>
+                                    <button class="btn btn-danger pull-right">Tìm kiếm</button> &nbsp;
+                                    <button class="btn btn-danger pull-right">Làm mới</button>
                                 </div>
                             </div>
                         </div>
@@ -126,29 +126,26 @@
                             <div class="card-body">
                                 <div class="col-md-12 mar-export">
                                     <button class="btn btn-danger pull-right" (click)=" AlertModal.show() " type="button "
-                                        tabindex="0 ">Add New</button>
-                                    <button class="btn btn-danger pull-right">Export to excel</button>
+                                        tabindex="0 ">Thêm mới</button>
+                                    <button class="btn btn-danger pull-right">Xuất file Excel</button>
                                     <br /><br />
                                 </div>
                                 <table class="table ">
                                     <thead>
                                         <tr>
                                             <th style="width:30% ">
-
                                                 <a class="text-nowrap " style="cursor: pointer ">
-                                                    Role Name
+                                                    Vai trò
                                                 </a>
                                             </th>
-                                            <th style="width:30% ">
-
+                                            <th style="width:30%">
                                                 <a class="text-nowrap " style="cursor: pointer ">
                                                     Remarks
                                                 </a>
                                             </th>
-                                            <th style="width:30% ">
-
+                                            <th style="width:30%;text-align: center ">
                                                 <a class="text-nowrap " style="cursor: pointer ">
-                                                    Status
+                                                    Tình trạng
                                                 </a>
                                             </th>
                                             <th style="width: 10% ">
@@ -198,24 +195,29 @@
                                         </tr>
                                     </tbody>
                                     <tfoot>
-                                        <div class="row">
-                                            <ul class="pagination ">
-                                                <li class="page-item ">
-                                                    <a class="page-link " style="cursor: pointer ">«</a>
-                                                </li>
-                                                <li class="page-item ">
-                                                    <a class="page-link " style="cursor: pointer ">1</a>
-                                                </li>
-                                                <li class="page-item ">
-                                                    <a class="page-link " style="cursor: pointer ">2</a>
-                                                </li>
-                                                <li class="page-item ">
-                                                    <a class="page-link " style="cursor: pointer ">»</a>
-                                                </li>
-                                            </ul>
-                                            <ul class="pagination pull-right float-sm-right ">
-                                            </ul>
-                                        </div>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <div class="row" style="text-align: center">
+                                                    <ul class="pagination ">
+                                                        <li class="page-item ">
+                                                            <a class="page-link " style="cursor: pointer ">«</a>
+                                                        </li>
+                                                        <li class="page-item ">
+                                                            <a class="page-link " style="cursor: pointer ">1</a>
+                                                        </li>
+                                                        <li class="page-item ">
+                                                            <a class="page-link " style="cursor: pointer ">2</a>
+                                                        </li>
+                                                        <li class="page-item ">
+                                                            <a class="page-link " style="cursor: pointer ">»</a>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="pagination pull-right float-sm-right ">
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
                                     </tfoot>
                                 </table>
                             </div>

@@ -239,8 +239,9 @@
                                 <option>Cấp 4: Báo động</option>
                             </select>
                         </div>
+                        <label style="margin-top: 1%">Từ ngày</label>
                         <div class="col-sm-3">
-                            <label style="margin-top: 2%">Từ ngày...</label>
+                            <input type="text" class="form-control" id="inputkeyWord" placeholder="dd/mm/yyyy">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -279,136 +280,53 @@
                                             </th>
                                         </thead>
                                         <tbody>
-                                            <tr>
+                                            <tr *ngFor="let itemresult of itemresults">
                                                 <td>
-                                                    1
+                                                    {{itemresult.Id}}
                                                 </td>
                                                 <td>
-                                                    Dakota Rice
+                                                    {{itemresult.Type}}
                                                 </td>
                                                 <td>
-                                                    Niger
+                                                    {{itemresult.Content}}
                                                 </td>
                                                 <td>
-                                                    Oud-Turnhout
+                                                    {{itemresult.Time}}
                                                 </td>
                                                 <td>
-                                                    $36,738
-                                                </td>
-                                                <td>
-                                                    <img class="img" src="../assets/img/faces/edit-icon.png" />
-                                                    <img class="img" src="../assets/img/faces/delete-icon.png" />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    2
-                                                </td>
-                                                <td>
-                                                    Minerva Hooper
-                                                </td>
-                                                <td>
-                                                    Curaçao
-                                                </td>
-                                                <td>
-                                                    Sinaai-Waas
-                                                </td>
-                                                <td>
-                                                    $23,789
+                                                    {{itemresult.Status}}
                                                 </td>
                                                 <td>
                                                     <img class="img" src="../assets/img/faces/edit-icon.png" />
                                                     <img class="img" src="../assets/img/faces/delete-icon.png" />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    3
-                                                </td>
-                                                <td>
-                                                    Sage Rodriguez
-                                                </td>
-                                                <td>
-                                                    Netherlands
-                                                </td>
-                                                <td>
-                                                    Baileux
-                                                </td>
-                                                <td>
-                                                    $56,142
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    4
-                                                </td>
-                                                <td>
-                                                    Philip Chaney
-                                                </td>
-                                                <td>
-                                                    Korea, South
-                                                </td>
-                                                <td>
-                                                    Overland Park
-                                                </td>
-                                                <td>
-                                                    $38,735
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    5
-                                                </td>
-                                                <td>
-                                                    Doris Greene
-                                                </td>
-                                                <td>
-                                                    Malawi
-                                                </td>
-                                                <td>
-                                                    Feldkirchen in Kärnten
-                                                </td>
-                                                <td>
-                                                    $63,542
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    6
-                                                </td>
-                                                <td>
-                                                    Mason Porter
-                                                </td>
-                                                <td>
-                                                    Chile
-                                                </td>
-                                                <td>
-                                                    Gloucester
-                                                </td>
-                                                <td>
-                                                    $78,615
                                                 </td>
                                             </tr>
                                         </tbody>
                                         <tfoot>
-                                            <div class="row">
-                                                <ul class="pagination ">
-                                                    <li class="page-item ">
-                                                        <a class="page-link " style="cursor: pointer ">«</a>
-                                                    </li>
-                                                    <li class="page-item ">
-                                                        <a class="page-link " style="cursor: pointer ">1</a>
-                                                    </li>
-                                                    <li class="page-item ">
-                                                        <a class="page-link " style="cursor: pointer ">2</a>
-                                                    </li>
-                                                    <li class="page-item ">
-                                                        <a class="page-link " style="cursor: pointer ">»</a>
-                                                    </li>
-                                                </ul>
-                                                <ul class="pagination pull-right float-sm-right ">
-                                                </ul>
-                                            </div>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>
+                                                    <div class="row text-center">
+                                                        <ul class="pagination ">
+                                                            <li class="page-item ">
+                                                                <a class="page-link " style="cursor: pointer ">«</a>
+                                                            </li>
+                                                            <li class="page-item ">
+                                                                <a class="page-link " style="cursor: pointer ">1</a>
+                                                            </li>
+                                                            <li class="page-item ">
+                                                                <a class="page-link " style="cursor: pointer ">2</a>
+                                                            </li>
+                                                            <li class="page-item ">
+                                                                <a class="page-link " style="cursor: pointer ">»</a>
+                                                            </li>
+                                                        </ul>
+                                                        <ul class="pagination pull-right float-sm-right ">
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
                                         </tfoot>
                                     </table>
                                 </div>
