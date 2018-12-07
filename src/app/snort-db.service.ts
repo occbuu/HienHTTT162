@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import TAFFY from 'taffy'
+//import TAFFY from 'taffy'
 
 @Injectable()
 export class SnortDbService {
@@ -11,8 +11,8 @@ export class SnortDbService {
   ) { 
     this.loadSnortData().then((result) => {
       //let TAFFY = require( 'taffy' ).taffy;
-      console.log(result)
-      this.snortData = TAFFY.taffy(result);
+      //console.log(result)
+      this.snortData = result;
     })
   }
 
@@ -20,6 +20,7 @@ export class SnortDbService {
     return new Promise((resolve) => {
       var xobj = new XMLHttpRequest();
       xobj.overrideMimeType("application/json");
+      console.log("OK 1")
       xobj.open('GET', 'assets/snortdata.json', true);
       xobj.onreadystatechange = function () {
         if (xobj.readyState == 4 && xobj.status == 200) {
