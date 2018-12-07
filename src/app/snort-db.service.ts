@@ -1,14 +1,16 @@
 import { Injectable } from '@angular/core';
-
+import TAFFY from 'taffy'
 
 @Injectable()
 export class SnortDbService {
   snortData:any;
 
   
-  constructor() { 
+  constructor(
+
+  ) { 
     this.loadSnortData().then((result) => {
-      let TAFFY = require( 'taffy' ).taffy;
+      //let TAFFY = require( 'taffy' ).taffy;
       console.log(result)
       this.snortData = TAFFY.taffy(result);
     })
